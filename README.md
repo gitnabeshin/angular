@@ -4,6 +4,9 @@
 
 * `https://angular.jp/tutorials/first-app/01-hello-world`
 
+
+![AppHome](./first-app_01-hello-world/src/assets/AppScreen.png)
+
 ## Setup for iMac
 
 ```
