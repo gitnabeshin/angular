@@ -136,3 +136,16 @@ CREATE my_project/public/favicon.ico (15086 bytes)
 nabeshin@iMacNabeshin-894 Angular % ls
 first-app_01-hello-world        my_project
 ```
+
+
+## Logging
+
+```
+    submitApplication(firstName: string, lastName: string, email: string) {
+        console.log(
+            `Homes application received: firstName: ${firstName}, lastName: ${lastName}, email: ${email}.`,
+        );
+    }
+```
+
+![AppHome](./first-app_01-hello-world/src/assets/Angular_logging.png)

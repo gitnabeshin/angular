@@ -46,3 +46,5 @@ cypress/videos/
 
 # Optional: If using Firebase
 .firebase/
+
+.DS_Store
