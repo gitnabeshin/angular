@@ -13,9 +13,6 @@ import { HousingService } from '../housing.service';
     selector: 'app-home',
     imports: [HousingLocation], // my component
     template: `
-    <p>
-      My anglar study. "App Home"
-    </p>
     <section>
         <form>
         <input type="text" placeholder="Filter by city" />
