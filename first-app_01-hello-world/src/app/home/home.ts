@@ -35,12 +35,22 @@ export class Home {
     // initial total list for search
     filteredLocationList: HousingLocationInfo[] = [];
 
+    /*
+        constructor() {
+            //Get data list from injected service
+            this.housingLocationList = this.housingService.getAllHousingLocations();
+    
+            // save initial total list
+            this.filteredLocationList = this.housingLocationList;
+        }
+    */
     constructor() {
-        //Get data list from injected service
-        this.housingLocationList = this.housingService.getAllHousingLocations();
-
-        // save initial total list
-        this.filteredLocationList = this.housingLocationList;
+        this.housingService
+            .getAllHousingLocations()
+            .then((housingLocationList: HousingLocationInfo[]) => {
+                this.housingLocationList = housingLocationList;
+                this.filteredLocationList = housingLocationList;
+            });
     }
 
     filterResults(text: string) {

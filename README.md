@@ -2,7 +2,7 @@
 
 ## Reference URL
 
-* `https://angular.jp/tutorials/first-app/01-hello-world`
+* [https://angular.jp/tutorials/first-app/01-hello-world](https://angular.jp/tutorials/first-app/01-hello-world)
 
 
 ![AppHome](./first-app_01-hello-world/src/assets/AppScreen.png)
@@ -149,3 +149,49 @@ first-app_01-hello-world        my_project
 ```
 
 ![AppHome](./first-app_01-hello-world/src/assets/Angular_logging.png)
+
+## Http communication
+
+```
+nabeshin@iMacNabeshin-1060 first-app_01-hello-world % npm install -g json-server
+
+added 45 packages in 9s
+
+14 packages are looking for funding
+  run `npm fund` for details
+nabeshin@iMacNabeshin-1060 first-app_01-hello-world % json-server --watch db.json
+--watch/-w can be omitted, JSON Server 1+ watches for file changes by default
+JSON Server started on PORT :3000
+Press CTRL-C to stop
+Watching db.json...
+
+(˶ᵔ ᵕ ᵔ˶)
+
+Index:
+http://localhost:3000/
+
+Static files:
+Serving ./public directory if it exists
+
+Endpoints:
+http://localhost:3000/locations
+
+```
+
+
+```
+async getAllHousingLocations(): Promise<HousingLocationInfo[]> {
+    const data = await fetch(this.url);
+    return (await data.json()) ?? [];
+  }
+
+
+async getHousingLocationById(id: number): Promise<HousingLocationInfo | undefined> {
+    const data = await fetch(`${this.url}?id=${id}`);
+    const locationJson = await data.json();
+    return locationJson[0] ?? {};
+  }
+```
+
+![JsonServer](./first-app_01-hello-world/src/assets/json-server.png)
+
