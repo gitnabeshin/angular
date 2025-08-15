@@ -195,3 +195,15 @@ async getHousingLocationById(id: number): Promise<HousingLocationInfo | undefine
 
 ![JsonServer](./first-app_01-hello-world/src/assets/json-server.png)
 
+# Angular DevTools
+
+* Install
+
+![ChromeStore](./first-app_01-hello-world/src/assets/chrome-store.png)
+
+![DevTool_1](./first-app_01-hello-world/src/assets/devtool_1.png)
+
+![DevTool_2](./first-app_01-hello-world/src/assets/devtool_2.png)
+
+![DevTool_3](./first-app_01-hello-world/src/assets/devtool_3.png)
+
